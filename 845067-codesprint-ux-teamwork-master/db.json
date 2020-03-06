@@ -1,0 +1,56 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "place": [
+   
+    
+    {
+      "Inr": "445",
+      "Paisa": 65,
+      "Firstname": "hamsi",
+      "Lastname": "namburi",
+      "State": "andhra",
+      "Street": "h:-56",
+      "Country": "",
+      "Pincode": 565777,
+      "Email": "hamsi@gmail.com",
+      "Bfirstname": "Hamsi",
+      "Blastname": "namburi",
+      "City": "vijayawada",
+      "Mobile": "7",
+      "id": 15
+    },
+    
+   
+    {
+      "Id": 691,
+      "Inr": "445",
+      "Paisa": 23,
+      "Firstname": "sdfsdfsdfsdf",
+      "State": "sdfds",
+      "Street": "sdfsdf",
+      "Country": "",
+      "Pincode": 234342,
+      "Email": "hamsi@gmail.com",
+      "Bfirstname": "fdgsdfsdfsdf",
+      "City": "sfds",
+      "Mobile": "",
+      "id": 18
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+<div style="margin-left: 350px;" onload="focus()">
+    <form [formGroup]="PlaceForm" (ngSubmit)="onsubmit()">
+        <div class="container register-form" id="form" style="background-color:rgb(255,255,255,0.5);float: right;width:800px;margin-top:90px;margin-left:30px;">
+            <div class="form">
+                <div class="note">
+                    <p>Order Gifts</p>
+                </div>
+               
+                <div class="form-content"  style="border-color: white;">
+                    <div class="row">
+                       <div class="col-md-2">
+                           <div class="form-group">
+                           <label>GiftCard Amount:</label></div>
+                           <div class="form-group">
+                            <label style="margin-top: 10px;">Receipent Name:</label></div>
+                       </div>
+                          
+                       
+                            <div class="col-md-4">
+                                
+                            <div class="form-group">
+                             
+                                <input formControlName="Inr" type="text"  size="3" min="0" max="100" maxlength="3" placeholder="INR" id="t1" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Inr.errors }"/>
+                               
+                                <div *ngIf="submitted && f.Inr.errors" class="invalid-feedback">
+                                    <div *ngIf="f.Inr.errors.required">First Name>Inr is required</div>
+                                    <div *ngIf="f.Inr.errors.pattern"Enter only Alphabets></div>
+                                </div>
+                                </div>
+                                <div class="form-group">
+                                   
+                                    <input type="text" id="t3" class="form-control" formControlName="Firstname" placeholder="FirstName" [ngClass]="{ 'is-invalid': submitted && f.Firstname.errors }"/>
+                                    <div *ngIf="submitted && f.Firstname.errors" class="invalid-feedback">
+                                        <div *ngIf="f.Firstname.errors.required">First Name is required</div>
+                                        <div *ngIf="f.Firstname.errors.pattern">Enter only Alphabets</div>
+                                    </div>
+                            </div>
+                            </div>
+                     
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input formControlName="Paisa" class="form-control" type="number" maxlength="100" size="3" placeholder="Paisa" id="t2" required [ngClass]="{ 'is-invalid': submitted && f.Paisa.errors }"/>
+                                <div *ngIf="submitted && f.Paisa.errors" class="invalid-feedback">
+                                <div *ngIf="f.Paisa.errors.required">Paisa is required</div>
+                                <div *ngIf="f.Paisa.errors.pattern">Enter only Alphabets</div>
+                               </div>
+                            </div>
+     
+                            <div class="form-group">
+                            
+                                <input type="text" class="form-control" id="t4" formControlName="Lastname" placeholder="Lastname" [ngClass]="{ 'is-invalid': submitted && f.Lastname.errors }"/>
+                                <div *ngIf="submitted && f.Lastname.errors" class="invalid-feedback">
+                                    <div *ngIf="f.Lastname.errors.required">First Name is required</div>
+                                    <div *ngIf="f.Lastname.errors.pattern">Enter only Alphabets</div>
+                                </div>
+                        </div>
+                    </div>
+                    <div style="width: 920px; margin-left: 20px;">
+                        <fieldset  class="border p-2">
+                            <legend   class="w-auto"> Shipping Address</legend>
+                            <div>
+                                Street Address:&nbsp;&nbsp; <input   type="text" class="form-control" formControlName="Street" size="30" id="t5" [ngClass]="{ 'is-invalid': submitted && f.Street.errors }"/> <br />
+                                <div *ngIf="submitted && f.Street.errors" class="invalid-feedback">
+                                    <div *ngIf="f.Street.errors.required">First Name is required</div>
+                                    <div *ngIf="f.Street.errors.pattern">Enter only Alphabets</div>
+                                </div>
+                            </div><br />
+                            <div> City:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" class="form-control" formControlName="City" id="t6" [ngClass]="{ 'is-invalid': submitted && f.City.errors }" required /><br />
+                            <div *ngIf="submitted && f.City.errors" class="form-control" class="invalid-feedback">
+                                <div *ngIf="f.City.errors.required">First Name is required</div>
+                                <div *ngIf="f.City.errors.pattern">Enter only Alphabets</div>
+                            </div></div>
+                            <div> State:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="form-control" formControlName="State" id="t7" [ngClass]="{ 'is-invalid': submitted && f.State.errors }" /><br />
+                            <div *ngIf="submitted && f.State.errors" class="invalid-feedback">
+                                <div *ngIf="f.State.errors.required">First Name is required</div>
+                                <div *ngIf="f.State.errors.pattern">Enter only Alphabets</div>
+                            </div>
+                        </div>
+                            <div>
+                                Country:<select id="sel"  name="sel" [ngClass]="{ 'is-invalid': submitted && f.Country.errors }">
+                                    <option >Select Country</option>
+                                    <option > India</option>
+                                    <option > Africa</option>
+                                    <option> US</option>
+                                </select>
+                            </div><br />
+                            <div>Pincode:<input  type="number" class="form-control" formControlName="Pincode" size="6" min="6" id="t8" [ngClass]="{ 'is-invalid': submitted && f.Pincode.errors }" /> <br />
+                            <div *ngIf="submitted && f.Pincode.errors" class="invalid-feedback">
+                                <div *ngIf="f.Pincode.errors.required">First Name is required</div>
+                                <div *ngIf="f.Pincode.errors.pattern">Enter only Alphabets</div>
+                            </div>
+                        </div>
+    
+    
+                        </fieldset>
+                    </div>
+                   <div class="col-md-3">
+                       <div class="form-group">
+                           <label style="margin-top: 30px;">BuyerName:</label>
+    
+                       </div>
+    
+                   </div>
+                    <div class="col-md-4">
+                        
+                        <div class="form-group">
+                        <br /><input type="text" formControlName="Bfirstname" class="form-control" placeholder="firstname" id="t9" [ngClass]="{ 'is-invalid': submitted && f.Bfirstname.errors }" />
+                        <div *ngIf="submitted && f.Bfirstname.errors" class="invalid-feedback">
+                            <div *ngIf="f.Bfirstname.errors.required">First Name is required</div>
+                            <div *ngIf="f.Bfirstname.errors.pattern">Enter only Alphabets</div>
+                        </div></div></div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <br /> <input type="text" formControlName="Blastname" class="form-control" placeholder="lastname" id="t10" [ngClass]="{ 'is-invalid': submitted && f.Blastname.errors }" />
+                        <div *ngIf="submitted && f.Blastname.errors" class="invalid-feedback">
+                            <div *ngIf="f.Blastname.errors.required">First Name is required</div>
+                            <div *ngIf="f.Blastname.errors.pattern">Enter only Alphabets</div>
+                        </div>
+                
+                    </div></div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label style="margin-top: 10px;">PhoneNumber:</label></div>
+                            <div class="form-group">
+                                <label style="margin-top: 10px;">Email:</label>
+     
+                        </div></div>
+                     <div class="col-md-9">
+                    
+                        <div class="form-group">
+                            <span>
+                                <input  value="91" size="1" readonly />
+                                <input  size="2"  maxlength="1" min="1" pattern="[1-9]{1}" id="p1" required />
+                                <input size="1" formControlName="Mobileno" id="p2" pattern="[0-9]{1}" maxlength="1" />
+                                <input   pattern="[0-9]{1}" maxlength="1" id="p3" size="1" />
+                                <input  size="1" pattern="[0-9]{1}"  id="p4" maxlength="1" />
+                                <input formControlName="Mobileno" size="1" pattern="[0-9]{1}" maxlength="1" id="p5" />
+                                <input formControlName="Mobileno" size="1" pattern="[0-9]{1}"  id="p6" maxlength="1" />
+                                <input formControlName="Mobileno" size="1" pattern="[0-9]{1}"  id="p7" maxlength="1" />
+                                <input formControlName="Mobileno" size="1" pattern="[0-9]{1}"  id="p8" maxlength="1" />
+                                <input formControlName="Mobileno" size="1" pattern="[0-9]{1}"  id="p9" maxlength="1" />
+                                <input formControlName="Mobileno" pattern="[0-9]{1}" id="p10" size="1" />
+                            </span>
+                    </div>
+                          
+                        <div class="col-md-6">
+                         <div class="form-group">
+                           <input style="width: 550px;" formControlName="Email" class="form-control" type="email" id="t11" [ngClass]="{ 'is-invalid': submitted && f.Email.errors }" />
+                            <div *ngIf="submitted && f.Email.errors" class="invalid-feedback">
+                                <div *ngIf="f.Email.errors.required">First Name is required</div>
+                                <div *ngIf="f.Email.errors.pattern">Enter only Alphabets</div>
+                            </div>
+                        </div>
+                         </div>
+    
+        
+                        </div>
+                    
+                    </div>
+                 
+                </div>
+        
+                <button (click)="Add()"  class="btnSubmit">Submit</button> 
+            </div>
+        </div>
+        </form>
+        
+        </div>
